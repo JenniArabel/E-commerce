@@ -1,0 +1,132 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+p{
+    margin-left: 50px;
+    font-size: 18px;
+}
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    background-color:#202020;
+    border: #95C629 solid 8px;
+    position: sticky;
+    top: 0;
+}
+.menu img{
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.menu{
+    border: solid #95C629;
+    border-radius: 50%;
+    background-color: #95C629;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.titulo img{
+   width: 200px;
+}
+.carrito img{
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.carrito{
+    border: solid #95C629;
+    border-radius: 50%;
+    background-color: #95C629;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.container-principal{
+    background: linear-gradient(0deg, rgba(149,198,41,1) 0%, rgba(0,0,0,1) 80%);
+}
+.container-remeras img{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 4px solid #95C629;
+    border-radius: 6px;
+}
+.pantalones-1, .pantalones-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.pantalon-info{
+    margin: 16px;
+    background-color: #202020;
+    border-radius: 4px;
+}
+.pantalon-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.button-agregar-carrito{
+    background-color: #202020;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px;
+    align-self: center;
+}
+.container-formulario{
+    background-color: black;
+    color: #95C629;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.email-suscribir{
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
+    border: 2px solid #95C629;
+    font-size: large;
+}
+.submit-button{
+    background-color: #95C629;
+    border-radius: 10px;
+    border: 2px solid #202020;
+    padding: 8px;
+    font-size: large;
+}
+.social-medias-icons{
+    background-color: black;
+    margin-top: -5px;
+    height: auto;
+}
+ul, li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px; 
+}
+.social-medias-icons img{
+    width: 44px;
+}
+@media screen and (max-width: 640px){
+    .container-principal img{
+        width: 100px;
+        height: 100px;
+        margin: 0px;
+    }
+}
