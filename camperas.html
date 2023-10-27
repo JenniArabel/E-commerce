@@ -1,132 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Camperas</title>
-    <link rel="stylesheet" href="camperas.css">
-</head>
-<body>
+    <link rel="stylesheet" href="camperas.css" />
+  </head>
+  <body>
     <div class="container-header">
-        <div class="menu">
-            <img src="Imagenes/Icono Menu.png" alt="Menu">
-        </div>
-        <div class="titulo">
-            <a href="index.html"><img src="Imagenes/Logo Tienda.png" alt="Nombre tienda"></a>
-        </div>
-        <div class="carrito">
-            <img src="Imagenes/Logo Carrito.png" alt="Carrito de Compras">
-        </div>
+      <div class="menu">
+        <img src="Imagenes/Icono Menu.png" alt="Menu" />
+      </div>
+      <div class="titulo">
+        <a href="index.html"
+          ><img src="Imagenes/Logo Tienda.png" alt="Nombre tienda"
+        /></a>
+      </div>
+      <div class="carrito">
+        <img src="Imagenes/Logo Carrito.png" alt="Carrito de Compras" />
+      </div>
     </div>
 
     <div class="container-principal">
-        <div class="container-camperas">
-            <div class="camperas-1">
-                <div class="campera-info">
-                    <img src="Imagenes/campera1.jpeg" alt="Campera ">
-                    <p>Campera "Top Jacket" </p>
-                    <p>Talles S - M - L</p>
-                    <p>Color Negro Blanco y Rosa disponibles</p>
-                    <p>$18.000</p>
-                    <br>
-                    <div class="campera-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="campera-info">
-                    <img src="Imagenes/campera2.jpeg" alt="Piluso Urban">
-                    <p> Campera "University" </p>
-                    <p>Talles S - M - L</p>
-                    <p>Color Verde y Azul disponibles</p>
-                    <p>$25.000</p>
-                    <br>
-                    <div class="campera-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="campera-info">
-                    <img src="Imagenes/campera3.jpeg" alt="Pañuelo Hippie">
-                    <p>Campera "American" </p>
-                    <p>Talles M - L</p>
-                    <p>Color Único disponible</p>
-                    <p>$29.500</p>
-                    <br>
-                    <div class="campera-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-
-                </div>
-            </div>
-            
-            <div class="camperas-2">
-                <div class="campera-info">
-                    <img src="Imagenes/campera4.jpeg" alt="Gorra Bull">
-                    <p>Campera "Bull"</p>
-                    <p>Talles S - M -L </p>
-                    <p>Color Único disponible</p>
-                    <p>$26.000</p>
-                    <br>
-                    <div class="campera-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="campera-info">
-                    <img src="Imagenes/campera5.jpeg" alt="Lentes">
-                    <p>Campera "Nasa Jacket"</p>
-                    <p>Talles S - M - L </p>
-                    <p>Color Azul y Negro disponibles </p>
-                    <p>$25.000</p>
-                    <br>
-                    <div class="campera-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="campera-info">
-                    <img src="Imagenes/campera6.jpeg" alt="Riñonera Supreme">
-                    <p>Campera "Black and White"</p>
-                    <p>Talles S - L</p>
-                    <p>Color Único disponible</p>
-                    <p>$26.500</p>
-                    <br>
-                    <div class="campera-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
+      <div class="container-camperas">
+        <div class="container-button">
+          <button class="mostrar-button">Mostrar</button>
         </div>
+        <div class="camperas-list">
+          <table class="container-camperas-list" border="4">
+            <thead class="caja">
+              <tr>
+                <th colspan="5">Stock de camperas</th>
+              </tr>
+              <tr>
+                <th>Articulo</th>
+                <th>Talles</th>
+                <th>Color</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+              </tr>
+            </thead>
+            <tbody class="camperas-datos"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container-formulario">
+          <p>¡Recibí las mejores ofertas!</p>
+          <form action="/" name="suscribir" method="post">
+            <input
+              type="email"
+              class="email-suscribir"
+              required="required"
+              placeholder="Ingresá tu e-mail"
+            />
+            <button type="submit" class="submit-button">Suscribirme</button>
+          </form>
         </div>
 
-        <footer>
-            <div class="container-formulario">
-                <p>¡Recibí las mejores ofertas!</p>
-                <form action="/" name="suscribir" method="post">
-                    <input type="email" class="email-suscribir" required="required" placeholder="Ingresá tu e-mail">
-                    <button type="submit" class="submit-button">Suscribirme</button>
-                </form>
-            </div>
+        <div class="social-medias-icons">
+          <ul>
+            <li>
+              <a href="/" target="_blank">
+                <img src="Imagenes/instagram.png" alt="Logo Instagram"
+              /></a>
+            </li>
 
-            <div class="social-medias-icons">
-                <ul>
-                    <li>
-                        <a href="/" target="_blank"> <img src="Imagenes/instagram.png" alt="Logo Instagram"></a>
-                    </li>
+            <li>
+              <a href="/" target="_blank">
+                <img src="Imagenes/whatsapp.png" alt="Logo Whatsapp"
+              /></a>
+            </li>
 
-                    <li>
-                        <a href="/" target="_blank"> <img src="Imagenes/whatsapp.png" alt="Logo Whatsapp"></a>
-                    </li>
+            <li>
+              <a href="/" target="_blank">
+                <img src="Imagenes/twitter.png" alt="Logo Twitter"
+              /></a>
+            </li>
 
-                    <li>
-                        <a href="/"target="_blank"> <img src="Imagenes/twitter.png" alt="Logo Twitter"></a>
-                    </li>
-
-                    <li>
-                        <a href="/"target="_blank"> <img src="Imagenes/facebook.png" alt="Logo Facebook"></a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+            <li>
+              <a href="/" target="_blank">
+                <img src="Imagenes/facebook.png" alt="Logo Facebook"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

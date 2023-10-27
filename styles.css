@@ -5,6 +5,7 @@
 }
 html,body{
     height: 100%;
+    display: flex;
 }
 .principal-container{
     min-height: 100vh;

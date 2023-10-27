@@ -23,78 +23,35 @@
     </div>
 
     <div class="container-principal">
-        <div class="container-remeras">
-            <div class="pantalones-1">
-                <div class="pantalon-info">
-                    <img src="Imagenes/pantalon1.jpeg" alt="Pantalón Cargo Monik">
-                    <p>Pantalón Cargo "Monik"</p>
-                    <p>Talles 36 - 38 - 40</p>
-                    <p>Color Gris disponible</p>
-                    <p>$10.000</p>
-                    <br>
-                    <div class="pantalon-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="pantalon-info">
-                    <img src="Imagenes/pantalon2.jpeg" alt="Jean Fresh">
-                    <p>Jean "Fresh"</p>
-                    <p>Talles 36 - 38 - 40</p>
-                    <p>Color Celeste y Azul disponibles</p>
-                    <p>$15.800</p>
-                    <br>
-                    <div class="pantalon-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="pantalon-info">
-                    <img src="Imagenes/pantalon3.jpeg" alt="Pantalón Cargo Chain">
-                    <p>Pantalón Cargo "Chain"</p>
-                    <p>Talles 40 - 42 - 44 - 46 - 48 </p>
-                    <p>Color Negro y Crema disponibles</p>
-                    <p>$16.900</p>
-                    <br>
-                    <div class="pantalon-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pantalones-2">
-                <div class="pantalon-info">
-                    <img src="Imagenes/pantalon4.jpeg" alt="Pantalon Cargo Stone">
-                    <p>Pantalon Cargo "Stone"</p>
-                    <p>Talles 40 - 42 - 44 - 46 - 48</p>
-                    <p>Color Azul disponible</p>
-                    <p>$18.800</p>
-                    <br>
-                    <div class="pantalon-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="pantalon-info">
-                    <img src="Imagenes/pantalon5.jpeg" alt="Pantalon Nev-er">
-                    <p>Pantalon "Nev-er"</p>
-                    <p>Talles 40 - 42 - 44 - 46 - 48</p>
-                    <p>Color Negro disponible</p>
-                    <p>$16.800</p>
-                    <br>
-                    <div class="pantalon-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
-                <div class="pantalon-info">
-                    <img src="Imagenes/pantalon 6.jpeg" alt="Pantalon Evil">
-                    <p>Pantalon "Evil"</p>
-                    <p>Talles 40 - 42 - 44 - 46 - 48</p>
-                    <p>Color Negro disponible</p>
-                    <p>$24.500</p>
-                    <br>
-                    <div class="pantalon-button">
-                        <button class="button-agregar-carrito" name="agregar-carrito" type="button">Agregar al carrito</button>
-                    </div>
-                </div>
+        <div class="container-filtro">
+            <input type="text" class="filtro" placeholder="Filtrar artículo">
+            <button class="filtrar-button
+            ">Filtrar</button>
         </div>
+        <div class="container-pantalones">
+            <div class="container-button">
+            <button class="mostrar-button">Mostrar</button>
+            </div>
+            <div class="pantalones-list">
+                <table class="container-pantalones-list" border="4">
+                    <thead class="caja">
+                    <tr>
+                        <th colspan="5">
+                        Stock de pantalones
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Articulo</th>
+                        <th>Talles</th>
+                        <th>Color</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody class="pantalones-datos"></tbody>
+                </table>
+            </div>
         </div>
 
         <footer>
@@ -127,5 +84,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

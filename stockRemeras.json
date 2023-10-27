@@ -1,0 +1,44 @@
+[
+    {
+        "articulo": "Remera LA",
+        "talles": "S - XXXL",
+        "color": "Negro",
+        "precio": "$5000",
+        "imagen": "/parcial_practicas/Imagenes/remera-1.jpg"
+    },
+    {
+        "articulo": "Remera Bad Rat",
+        "talles": "S - XXXL",
+        "color": "Negro",
+        "precio": "$5000",
+        "imagen": "/parcial_practicas/Imagenes/remera-2.jpg"
+    },
+    {
+        "articulo": "Remera Black Rouse",
+        "talles": "S - XXXL",
+        "color": "Blanco",
+        "precio": "$4.800",
+        "imagen": "/parcial_practicas/Imagenes/remera-3.png"
+    },
+    {
+        "articulo": "Remera Balenciaga",
+        "talles": "S - XXXL",
+        "color": "Negro y Blanco",
+        "precio": "$6.800",
+        "imagen": "/parcial_practicas/Imagenes/remera-4-mujer.jpg"
+    },
+    {
+        "articulo": "Top Black-White",
+        "talles": "S - XXXL",
+        "color": "Negro y Blanco",
+        "precio": "$4.800",
+        "imagen": "/parcial_practicas/Imagenes/remera-5-mujer.jpg"
+    },
+    {
+        "articulo": "Top Spider",
+        "talles": "S - XXXL",
+        "color": "Gris",
+        "precio": "$5.800",
+        "imagen": "/parcial_practicas/Imagenes/remera-6-mujer.jpg"
+    }
+]

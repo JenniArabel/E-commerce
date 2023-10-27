@@ -54,37 +54,40 @@ p{
 .container-principal{
     background: linear-gradient(0deg, rgba(149,198,41,1) 0%, rgba(0,0,0,1) 80%);
 }
-.container-remeras img{
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    border: 4px solid #95C629;
-    border-radius: 6px;
+.container-button{
+    width: 100px;
+    margin-left: auto; 
+    margin-right: auto;
 }
-.pantalones-1, .pantalones-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.mostrar-button{
+    background-color: #95C629;
+    border-radius: 10px;
+    border: 2px solid #202020;
+    padding: 8px 16px;
+    font-size: large;
+    margin-top: 20px;
 }
-.pantalon-info{
-    margin: 16px;
-    background-color: #202020;
-    border-radius: 4px;
-}
-.pantalon-button{
+.pantalones-list{
     display: flex;
     justify-content: center;
-    margin-bottom: 8px;
 }
-.button-agregar-carrito{
+.container-pantalones-list{
     background-color: #202020;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-color: #95C629;
     color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 8px;
-    align-self: center;
+}
+.pantalones-datos img {
+    width: 200px;
+    height: 200px;
+}
+td, th{
+    padding: 10px;
+}
+th{
+    background-color: #95C629;
 }
 .container-formulario{
     background-color: black;

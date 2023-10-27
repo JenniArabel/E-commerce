@@ -1,0 +1,38 @@
+[
+    {
+        "articulo":"Mochila Cristal",
+        "color": "Negro y Blanco",
+        "precio": "$8.000",
+        "imagen": "/parcial_practicas/Imagenes/accesorios1.jpeg"
+    },
+    {
+        "articulo":"Piluso Urban",
+        "color": "Negro, Beige y Rosa",
+        "precio": "$5.000",
+        "imagen": "/parcial_practicas/Imagenes/accesorios2.jpeg"
+    },
+    {
+        "articulo":"Pañuelo Hippie",
+        "color": "Blanco y Rojo",
+        "precio": "$3.500",
+        "imagen": "/parcial_practicas/Imagenes/accesorios3.jpeg"
+    },
+    {
+        "articulo":"Gorra Bull",
+        "color": "Negro",
+        "precio": "$6.000",
+        "imagen": "/parcial_practicas/Imagenes/accesorios5.jpeg"
+    },
+    {
+        "articulo":"Lentes Lennon",
+        "color": "Negro y Rosa",
+        "precio": "$15.000",
+        "imagen": "/parcial_practicas/Imagenes/accesorios4.jpeg"
+    },
+    {
+        "articulo":"Minibag Supreme",
+        "color": "Negro",
+        "precio": "$6.500",
+        "imagen": "/parcial_practicas/Imagenes/accesorios6.jpeg"
+    }
+]
