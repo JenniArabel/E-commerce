@@ -37,17 +37,23 @@
         <a href="camperas.html"> <img src="Imagenes/icono campera.jpg" alt="Icono camperas"/></a>
       </div>
 
-      <!-- <div class="container-mostrar-todo-button">
-        <button class="mostrar-todo-button">Mostrar todos los productos</button>
-      </div> -->
-
       <footer>
         <div class="container-formulario">
-          <p>¡Recibí las mejores ofertas!</p>
-          <form action="/" name="suscribir" method="post">
-            <input type="email" class="email-suscribir" required="required" placeholder="Ingresá tu e-mail"/>
-            <button type="submit" class="submit-button">Suscribirme</button>
-          </form>
+          <p>Consultas</p>
+          <div class="subcontainer-form">
+            <form action="/" name="suscribir" class="form" id="formulario" method="post">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+              
+              <label for="nombre">Correo Electronico</label>
+              <input type="email" class="email-suscribir" required="required" placeholder="Ingresá tu e-mail"/>
+              
+              <label for="celular">Celular</label>
+              <input type="tel" id="celular" name="celular" pattern="[0-9]{9}" placeholder="Ingrese numero de celular" required>
+              
+              <button type="submit" class="submit-button">Enviar</button>
+            </form>
+          </div>
         </div>
 
         <div class="social-medias-icons">

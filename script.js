@@ -229,3 +229,24 @@ function traerDatos() {
 
   listaCamperas.send();
 }
+
+document.getElementById("formulario").addEventListener("input", function(event){
+  var target = event.target;
+
+  //Utilizar expresiones regulares para validar los inputs
+  if (target.id === "celular"){
+      var celularPattern = /^[0-9]{9,10}$/;
+      if(!celularPattern.test(target.value)){
+          target.setCustomValidity("El número de celular debe tener 9 dígitos numéricos.");
+      } else{
+          target.setCustomValidity("");
+      }
+  } else if(target.id === "nombre"){
+      var nombrePattern = /^[a-zA-Z]+$/;
+      if(!nombrePattern.test(target.value)){
+          target.setCustomValidity("El nombre debe contener sólo letras.");
+      } else{
+          target.setCustomValidity("");
+      }
+  }
+});
