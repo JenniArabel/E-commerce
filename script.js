@@ -1,138 +1,231 @@
-const mostrarButton = document.querySelector(".mostrar-button");
-mostrarButton.addEventListener("click", traerDatos);
+document.addEventListener("DOMContentLoaded", traerDatos);
 
 function traerDatos() {
-  const lista = new XMLHttpRequest();
-  lista.open("GET", "stockRemeras.json", true);
-
-  lista.onreadystatechange = function () {
-    if (lista.readyState === 4 && lista.status === 200) {
-      let datos = JSON.parse(lista.responseText);
-
-      let retorno = document.querySelector(".remeras-datos");
-      retorno.innerHTML = "";
-
-      for (let item of datos) {
-        retorno.innerHTML += `
-                <tr>
-                  <td>${item.articulo}</td>
-                  <td>${item.talles}</td>
-                  <td>${item.color}</td>
-                  <td>${item.precio}</td>
-                  <td> <img src="${item.imagen}" alt="${item.articulo}"> </td>
-                </tr>
-              `;
-      }
-    }
-  };
-
-  lista.send();
-
-  const lista2 = new XMLHttpRequest();
-  lista2.open("GET", "stockPantalones.json", true);
-
-  lista2.onreadystatechange = function () {
-    if (lista2.readyState === 4 && lista2.status === 200) {
-      let datos2 = JSON.parse(lista2.responseText);
-
-      let retorno2 = document.querySelector(".pantalones-datos");
-      retorno2.innerHTML = "";
-
-      for (let item2 of datos2) {
-        retorno2.innerHTML += `
-                <tr>
-                  <td>${item2.articulo}</td>
-                  <td>${item2.talles}</td>
-                  <td>${item2.color}</td>
-                  <td>${item2.precio}</td>
-                  <td> <img src="${item2.imagen}" alt="${item2.articulo}"> </td>
-                </tr>
-              `;
-      }
-    }
-  };
-
-  lista2.send();
-
-  const lista3 = new XMLHttpRequest();
-  lista3.open("GET", "stockAccesorios.json", true);
-
-  lista3.onreadystatechange = function () {
-    if (lista3.readyState === 4 && lista3.status === 200) {
-      let datos3 = JSON.parse(lista3.responseText);
-
-      let retorno3 = document.querySelector(".accesorios-datos");
-      retorno3.innerHTML = "";
-
-      for (let item3 of datos3) {
-        retorno3.innerHTML += `
-                <tr>
-                  <td>${item3.articulo}</td>
-                  <td>${item3.color}</td>
-                  <td>${item3.precio}</td>
-                  <td> <img src="${item3.imagen}" alt="${item3.articulo}"> </td>
-                </tr>
-              `;
-      }
-    }
-  };
-
-  lista3.send();
-
-  const lista4 = new XMLHttpRequest();
-  lista4.open("GET", "stockCamperas.json", true);
-
-  lista4.onreadystatechange = function () {
-    if (lista4.readyState === 4 && lista4.status === 200) {
-      let datos4 = JSON.parse(lista4.responseText);
-
-      let retorno4 = document.querySelector(".camperas-datos");
-      retorno4.innerHTML = "";
-
-      for (let item4 of datos4) {
-        retorno4.innerHTML += `
-                <tr>
-                  <td>${item4.articulo}</td>
-                  <td>${item4.talles}</td>
-                  <td>${item4.color}</td>
-                  <td>${item4.precio}</td>
-                  <td> <img src="${item4.imagen}" alt="${item4.articulo}"> </td>
-                </tr>
-              `;
-      }
-    }
-  };
-
-  lista4.send();
+  const listaRemeras = new XMLHttpRequest();
+  listaRemeras.open("GET", "stockRemeras.json", true);
 
   const filtroInput = document.querySelector(".filtro");
   const filtrarButton = document.querySelector(".filtrar-button");
-  const pantalonesDatos = document.querySelector(".pantalones-datos");
+ 
+  filtroInput.style.display = "block";
+  filtrarButton.style.display = "block";
 
-  filtrarButton.addEventListener("click", function() {
-    const filtroTexto = filtroInput.value.toLowerCase(); //Obtener el valor en minusculas
+  filtrarButton.addEventListener("click", function () {
+    const filtroInput = document.querySelector(".filtro");
+    const remerasDatos = document.querySelector(".remeras-datos");
 
-    const datos2 = JSON.parse(lista2.responseText);
+    const filtroTexto = filtroInput.value.toLowerCase();
 
-    //Filtra los fatos del JSON en fx del término de busqueda
-    const datosFiltrados = datos2.filter(function (item2){
-      return item2.articulo.toLowerCase().includes(filtroTexto);
+    const datosRemeras = JSON.parse(listaRemeras.responseText);
+
+    const datosFiltradosRemeras = datosRemeras.filter(function (itemRemeras) {
+      return (
+        itemRemeras.articulo.toLowerCase().includes(filtroTexto) ||
+        itemRemeras.precio.toString().includes(filtroTexto)
+      );
     });
-    pantalonesDatos.innerHTML= "";
 
-    for (let item2 of datosFiltrados) {
-      pantalonesDatos.innerHTML += `
-      <tr>
-        <td>${item2.articulo}</td>
-        <td>${item2.talles}</td>
-        <td>${item2.color}</td>
-        <td>${item2.precio}</td>
-        <td><img src="${item2.imagen}" alt="${item2.articulo}"></td>
-      </tr>
-    `;
+    remerasDatos.innerHTML = "";
+
+    for (let itemRemeras of datosFiltradosRemeras) {
+      remerasDatos.innerHTML += `    
+        <section> 
+          <img src="${itemRemeras.imagen}" alt="${itemRemeras.articulo}">    
+          <p>${itemRemeras.articulo}</p>    
+          <p>${itemRemeras.talles}</p>    
+          <p>${itemRemeras.color}</p>    
+          <p>${itemRemeras.precio}</p>
+        </section>
+      `;
     }
   });
+
+  listaRemeras.onreadystatechange = function () {
+    if (listaRemeras.readyState === 4 && listaRemeras.status === 200) {
+      let datosRemeras = JSON.parse(listaRemeras.responseText);
+
+      let retornoRemeras = document.querySelector(".remeras-datos");
+      retornoRemeras.innerHTML = "";
+
+      for (let itemRemeras of datosRemeras) {
+        retornoRemeras.innerHTML += ` 
+          <section> 
+            <img src="${itemRemeras.imagen}" alt="${itemRemeras.articulo}">    
+            <p>${itemRemeras.articulo}</p>    
+            <p>${itemRemeras.talles}</p>    
+            <p>${itemRemeras.color}</p>    
+            <p>${itemRemeras.precio}</p>
+          </section>      
+        `;
+      }
+    }
+  };
+
+  listaRemeras.send();
+
+  const listaPantalones = new XMLHttpRequest();
+  listaPantalones.open("GET", "stockPantalones.json", true);
   
+  filtrarButton.addEventListener("click", function () {
+    const filtroInput = document.querySelector(".filtro");
+    const pantalonesDatos = document.querySelector(".pantalones-datos");
+
+    const filtroTexto = filtroInput.value.toLowerCase();
+
+    const datosPantalones = JSON.parse(listaPantalones.responseText);
+
+    const datosFiltradosPantalones = datosPantalones.filter(function (itemPantalones) {
+      return (
+        itemPantalones.articulo.toLowerCase().includes(filtroTexto) ||
+        itemPantalones.precio.toString().includes(filtroTexto)
+      );
+    });
+
+    pantalonesDatos.innerHTML = "";
+
+    for (let itemPantalones of datosFiltradosPantalones) {
+      pantalonesDatos.innerHTML += `    
+        <section> 
+          <img src="${itemPantalones.imagen}" alt="${itemPantalones.articulo}">    
+          <p>${itemPantalones.articulo}</p>    
+          <p>${itemPantalones.talles}</p>    
+          <p>${itemPantalones.color}</p>    
+          <p>${itemPantalones.precio}</p>
+        </section>
+      `;
+    }
+  });
+
+  listaPantalones.onreadystatechange = function () {
+    if (listaPantalones.readyState === 4 && listaPantalones.status === 200) {
+      let datosPantalones = JSON.parse(listaPantalones.responseText);
+
+      let retornoPantalones = document.querySelector(".pantalones-datos");
+      retornoPantalones.innerHTML = "";
+
+      for (let itemPantalones of datosPantalones) {
+        retornoPantalones.innerHTML += `
+          <section> 
+            <img src="${itemPantalones.imagen}" alt="${itemPantalones.articulo}">    
+            <p>${itemPantalones.articulo}</p>    
+            <p>${itemPantalones.talles}</p>    
+            <p>${itemPantalones.color}</p>    
+            <p>${itemPantalones.precio}</p>
+          </section>       
+        `;
+      }
+    }
+  };
+
+  listaPantalones.send();
+
+  const listaAccesorios = new XMLHttpRequest();
+  listaAccesorios.open("GET", "stockAccesorios.json", true);
+
+  filtrarButton.addEventListener("click", function () {
+    const filtroInput = document.querySelector(".filtro");
+    const accesoriosDatos = document.querySelector(".accesorios-datos");
+
+    const filtroTexto = filtroInput.value.toLowerCase();
+
+    const datosAccesorios = JSON.parse(listaAccesorios.responseText);
+
+    const datosFiltradosAccesorios = datosAccesorios.filter(function (itemAccesorios) {
+      return (
+        itemAccesorios.articulo.toLowerCase().includes(filtroTexto) ||
+        itemAccesorios.precio.toString().includes(filtroTexto)
+      );
+    });
+
+    accesoriosDatos.innerHTML = "";
+
+    for (let itemAccesorios of datosFiltradosAccesorios) {
+      accesoriosDatos.innerHTML += `    
+        <section> 
+          <img src="${itemAccesorios.imagen}" alt="${itemAccesorios.articulo}">    
+          <p>${itemAccesorios.articulo}</p>   
+          <p>${itemAccesorios.color}</p>    
+          <p>${itemAccesorios.precio}</p>
+        </section>
+      `;
+    }
+  });
+
+  listaAccesorios.onreadystatechange = function () {
+    if (listaAccesorios.readyState === 4 && listaAccesorios.status === 200) {
+      let datosAccesorios = JSON.parse(listaAccesorios.responseText);
+
+      let retornoAccesorios = document.querySelector(".accesorios-datos");
+      retornoAccesorios.innerHTML = "";
+
+      for (let itemAccesorios of datosAccesorios) {
+        retornoAccesorios.innerHTML += `
+          <section> 
+            <img src="${itemAccesorios.imagen}" alt="${itemAccesorios.articulo}">    
+            <p>${itemAccesorios.articulo}</p>    
+            <p>${itemAccesorios.color}</p>    
+            <p>${itemAccesorios.precio}</p>
+          </section>            
+        `;
+      }
+    }
+  };
+
+  listaAccesorios.send();
+
+  const listaCamperas = new XMLHttpRequest();
+  listaCamperas.open("GET", "stockCamperas.json", true);
+
+  filtrarButton.addEventListener("click", function () {
+    const filtroInput = document.querySelector(".filtro");
+    const camperasDatos = document.querySelector(".camperas-datos");
+
+    const filtroTexto = filtroInput.value.toLowerCase();
+
+    const datosCamperas = JSON.parse(listaCamperas.responseText);
+
+    const datosFiltradosCamperas = datosCamperas.filter(function (itemCamperas) {
+      return (
+        itemCamperas.articulo.toLowerCase().includes(filtroTexto) ||
+        itemCamperas.precio.toString().includes(filtroTexto)
+      );
+    });
+
+    camperasDatos.innerHTML = "";
+
+    for (let itemCamperas of datosFiltradosCamperas) {
+      camperasDatos.innerHTML += `    
+        <section> 
+          <img src="${itemCamperas.imagen}" alt="${itemCamperas.articulo}">    
+          <p>${itemCamperas.articulo}</p>    
+          <p>${itemCamperas.talles}</p>    
+          <p>${itemCamperas.color}</p>    
+          <p>${itemCamperas.precio}</p>
+        </section>
+      `;
+    }
+  });
+
+  listaCamperas.onreadystatechange = function () {
+    if (listaCamperas.readyState === 4 && listaCamperas.status === 200) {
+      let datosCamperas = JSON.parse(listaCamperas.responseText);
+
+      let retornoCamperas = document.querySelector(".camperas-datos");
+      retornoCamperas.innerHTML = "";
+
+      for (let itemCamperas of datosCamperas) {
+        retornoCamperas.innerHTML += `
+          <section> 
+            <img src="${itemCamperas.imagen}" alt="${itemCamperas.articulo}">    
+            <p>${itemCamperas.articulo}</p>    
+            <p>${itemCamperas.talles}</p>    
+            <p>${itemCamperas.color}</p>    
+            <p>${itemCamperas.precio}</p>
+          </section>            
+        `;
+      }
+    }
+  };
+
+  listaCamperas.send();
 }
-
-

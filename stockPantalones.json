@@ -3,42 +3,42 @@
         "articulo":"Pantalón Cargo Monik",
         "talles": "36 - 38 - 40",
         "color": "Gris",
-        "precio": "$10.000",
+        "precio": 10000,
         "imagen": "/parcial_practicas/Imagenes/pantalon1.jpeg"
     },
     {
         "articulo":"Jean Fresh",
         "talles": "36 - 38 - 40",
         "color": "Celeste y Azul",
-        "precio": "$15.800",
+        "precio": 15800,
         "imagen": "/parcial_practicas/Imagenes/pantalon2.jpeg"
     },
     {
         "articulo":"Pantalón Cargo Chain",
         "talles": "40 - 42 - 44 - 46 - 48",
         "color": "Negro y Crema",
-        "precio": "$16.900",
+        "precio": 16900,
         "imagen": "/parcial_practicas/Imagenes/pantalon3.jpeg"
     },
     {
         "articulo":"Pantalon Cargo Stone",
         "talles": "40 - 42 - 44 - 46 - 48",
         "color": "Azul",
-        "precio": "$18.800",
+        "precio": 18800,
         "imagen": "/parcial_practicas/Imagenes/pantalon4.jpeg"
     },
     {
         "articulo":"Pantalon Nev-er",
         "talles": "40 - 42 - 44 - 46 - 48",
         "color": "Negro",
-        "precio": "$16.800",
+        "precio": 16800,
         "imagen": "/parcial_practicas/Imagenes/pantalon5.jpeg"
     },
     {
         "articulo":"Pantalon Evil",
         "talles": "40 - 42 - 44 - 46 - 48",
         "color": "Negro",
-        "precio": "$24.500",
+        "precio": 24500,
         "imagen": "/parcial_practicas/Imagenes/pantalon 6.jpeg"
     }
 ]
