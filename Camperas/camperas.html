@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap" rel="stylesheet"/>
+    <title>Camperas</title>
+    <link rel="stylesheet" href="camperas.css" />
+  </head>
+
+  <body>
+    <div class="container-header">
+      <div class="menu">
+        <img src="Imagenes/Icono Menu.png" alt="Menu" />
+      </div>
+
+      <div class="titulo">
+        <a href="index.html"><img src="Imagenes/Logo Tienda.png" alt="Nombre tienda"/> </a>
+      </div>
+
+      <div class="carrito">
+        <img src="Imagenes/Logo Carrito.png" alt="Carrito de Compras" />
+      </div>
+    </div>
+
+    <div class="container-principal">
+      <div class="container-camperas">
+        <div class="container-filtro">
+          <input type="text" class="filtro" placeholder="Filtrar por nombre o número"/>
+          <button class="filtrar-button"> Filtrar </button>
+        </div>
+
+        <div class="camperas-datos"></div>
+      </div>
+
+      <footer>
+        <div class="container-formulario">
+          <p>¡Recibí las mejores ofertas!</p>
+
+          <form action="/" name="suscribir" method="post">
+            <input
+              type="email"
+              class="email-suscribir"
+              required="required"
+              placeholder="Ingresá tu e-mail"
+            />
+            <button type="submit" class="submit-button">Suscribirme</button>
+          </form>
+        </div>
+
+        <div class="social-medias-icons">
+          <ul>
+            <li> <a href="/" target="_blank"> <img src="Imagenes/instagram.png" alt="Logo Instagram"/> </a> </li>
+
+            <li> <a href="/" target="_blank"> <img src="Imagenes/whatsapp.png" alt="Logo Whatsapp"/> </a> </li>
+
+            <li> <a href="/" target="_blank"> <img src="Imagenes/twitter.png" alt="Logo Twitter"/> </a> </li>
+
+            <li> <a href="/" target="_blank"> <img src="Imagenes/facebook.png" alt="Logo Facebook"/> </a> </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

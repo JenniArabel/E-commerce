@@ -1,0 +1,44 @@
+[
+    {
+        "articulo":"Campera Top",
+        "talles": "S - M - L",
+        "color": "Negro, Blanco y Rosa",
+        "precio": 15000,
+        "imagen": "/parcial_practicas/Imagenes/campera1.jpeg"
+    },
+    {
+        "articulo":"Campera University",
+        "talles": "S - M - L",
+        "color": "Verde con blanco",
+        "precio": 25000,
+        "imagen": "/parcial_practicas/Imagenes/campera2.jpeg"
+    },
+    {
+        "articulo":"Campera American",
+        "talles": "M - L",
+        "color": "Tricolor",
+        "precio": 29500,
+        "imagen": "/parcial_practicas/Imagenes/campera3.jpeg"
+    },
+    {
+        "articulo":"Campera Bull",
+        "talles": "S - M - L",
+        "color": "Tricolor",
+        "precio": 26000,
+        "imagen": "/parcial_practicas/Imagenes/campera4.jpeg"
+    },
+    {
+        "articulo":"Campera Nasa",
+        "talles": "S - M - L",
+        "color": "Azul",
+        "precio": 25000,
+        "imagen": "/parcial_practicas/Imagenes/campera5.jpeg"
+    },
+    {
+        "articulo":"Campera Just Do It",
+        "talles": "S - M - L",
+        "color": "Blanco con negro",
+        "precio": 26500,
+        "imagen": "/parcial_practicas/Imagenes/campera6.jpeg"
+    }
+]

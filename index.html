@@ -6,25 +6,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;900&display=swap" rel="stylesheet"/>
-    <title>Style Clothes</title>
+    <title> Style Clothes </title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="principal-container">
+    <main class="principal-container">
       <header class="container-header">
         <div class="menu">
           <img src="Imagenes/Icono Menu.png" alt="Menu" />
         </div>
+
         <div class="titulo">
-          <img src="Imagenes/Logo Tienda.png" alt="Nombre tienda" />
+          <a href="index.html"><img src="Imagenes/Logo Tienda.png" alt="Nombre tienda" /></a>
         </div>
+        
         <div class="carrito">
           <img src="Imagenes/Logo Carrito.png" alt="Carrito de Compras" />
         </div>
       </header>
 
-      <div class="contaniner-portada">
-        <img src="Imagenes/Portada.png" alt="Portada Home" />
+      <div class="container-carousel" >
+        <div class="carousel-slide">
+          <img src="/parcial_practicas//Imagenes/portada1.jpg" alt="Imagen 1 portada">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="/parcial_practicas/Imagenes/portada 2.jpg" alt="Imagen 2 portada">
+        </div>
+
+        <div class="carousel-slide">
+          <img src="/parcial_practicas/Imagenes/portada 3.jpg" alt="Imagen 3 portada">
+        </div>
+
+        <button id="antBtn"><img src="/parcial_practicas/Imagenes/previous-outline_.png" alt="Anterior"></button>
+        
+        <button id="nextBtn"><img src="/parcial_practicas/Imagenes/next-outline_.png" alt="Siguiente"></button>
       </div>
 
       <div class="container-iconos">
@@ -40,18 +56,25 @@
       <footer>
         <div class="container-formulario">
           <p>Consultas</p>
+
           <div class="subcontainer-form">
             <form action="/" name="suscribir" class="form" id="formulario" method="post">
               <label for="nombre">Nombre</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+              <input type="text" id="nombre" name="nombre" required placeholder="Ingrese nombre" >
+
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" required placeholder="Ingrese apellido" >
               
               <label for="nombre">Correo Electronico</label>
-              <input type="email" class="email-suscribir" required="required" placeholder="Ingresá tu e-mail"/>
+              <input type="email" class="email-suscribir" required placeholder="Ingresá tu e-mail" />
               
               <label for="celular">Celular</label>
-              <input type="tel" id="celular" name="celular" pattern="[0-9]{9}" placeholder="Ingrese numero de celular" required>
-              
-              <button type="submit" class="submit-button">Enviar</button>
+              <input type="tel" id="celular" name="celular" pattern="[0-9]{9}" required placeholder="Ingrese numero de celular">
+
+              <label for="text">Consulta</label>
+              <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
+
+              <button type="button" class="submit-button" id="enviar">Enviar</button>
             </form>
           </div>
         </div>
@@ -76,7 +99,9 @@
           </ul>
         </div>
       </footer>
+
       <script src="script.js"></script>
-    </div>
+
+    </main>
   </body>
 </html>

@@ -1,3 +1,38 @@
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const totalSlides = slides.length;
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  showSlide(currentIndex + 1);
+});
+
+document.getElementById('antBtn').addEventListener('click', () => {
+  showSlide(currentIndex - 1);
+});
+
+//Mostar la primer imagen al cargar la página:
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentIndex);
+})
+
+//Cambiar de imagen cada 5 segundos
+setInterval(() => {
+  showSlide(currentIndex + 1);
+}, 5000);
+
+function showSlide (index) {
+  slides[currentIndex].style.display = 'none';
+
+  if (index < 0) {
+    currentIndex = totalSlides - 1;
+  } else if (index >= totalSlides) {
+    currentIndex = 0;
+  } else {
+    currentIndex = index;
+  }
+  slides[currentIndex].style.display = 'block';
+}
+
 document.addEventListener("DOMContentLoaded", traerDatos);
 
 function traerDatos() {
@@ -248,5 +283,16 @@ document.getElementById("formulario").addEventListener("input", function(event){
       } else{
           target.setCustomValidity("");
       }
+  } else if (target.id === "apellido") {
+    var apellidoPattern = /^[a-zA-Z]+$/;
+      if(!apellidoPattern.test(target.value)){
+          target.setCustomValidity("El apellido debe contener sólo letras.");
+      } else{
+          target.setCustomValidity("");
+      }
   }
+});
+
+document.getElementById("enviar").addEventListener("click", () => {
+  alert('Enviado!')
 });
