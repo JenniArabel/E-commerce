@@ -18,33 +18,29 @@ body{
   border: 2px solid black; 
   border-radius: 50%;
   background-color: #F8C4D0;
-  width: 2.5vw;
-  height: 2.5vw;
-  margin-top: 1vw;
+  width: 40px;
+  height: 40px;
+  margin-top: 12px;
 }
 .menu{
-    margin-left: 1vw;
+    margin-left: 20px;
 }
 .carrito{
-    margin-right: 1vw;
+    margin-right: 20px;
 }
-.carrito img{
-    width: 2vw;
-    height: auto;
-} 
+.carrito img, 
 .menu img{
-    width: 2vw;
+    width: 30px;
     height: auto;
-    margin-top: 0.5vw;
+    margin-top: 8px;
 }
 .titulo img {
-    width: 14vw;
+    width: 150px;
 }
 .container-carousel{
     position: relative;
     width: 100%;
     overflow: hidden;
-    max-height: 60vh;
     text-align: center;
     background-color: white;
 }
@@ -52,7 +48,7 @@ body{
     display: none;
 }
 .carousel-slide img{
-    max-height: 60vh;
+    max-height: 600px;
     width: auto;
 }
 #antBtn, #nextBtn{
@@ -76,9 +72,12 @@ body{
 }
 .container-iconos{
     width: 100%;
-    height: 22vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
+    background-color: #CD9DB1;
+    padding-top: 10px;
+    padding-top: 10px;
 }
 .container-iconos a {
     display: inline-block;
@@ -91,7 +90,7 @@ body{
 .container-formulario{
     display: grid;
     place-items: center;
-    background-color: #CD9DB1;
+    background-color: #FDF2F5;
     color: black;
     font-size: large;
     padding: 1vw;
@@ -140,14 +139,13 @@ ul, li{
 .social-medias-icons img{
     width: 3vw;
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 767px){
+    .carousel-slide img{
+        width: 100%;
+        height: auto;
+    }
     .container-iconos{
-        height: 10vh;
+        width: 100%;
+        height: auto;
     }
-    .container-iconos img{
-        width: 10vw;
-    }
-    .container-iconos a {
-        margin-bottom: 0.5vh;
-    }
-}
+} 
