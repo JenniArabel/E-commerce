@@ -1,43 +1,43 @@
 [
     {
-        "articulo": "Remera LA",
+        "articulo": "Remera Cint",
         "talles": "S - XL",
         "color": "Negro",
         "precio": 5000,
         "imagen": "/parcial_practicas/Imagenes/remera-1.jpg"
     },
     {
-        "articulo": "Remera Bad Rat",
-        "talles": "S - XXL",
-        "color": "Negro",
+        "articulo": "Top Triangle",
+        "talles": "S - L",
+        "color": "Marron",
         "precio": 5200,
         "imagen": "/parcial_practicas/Imagenes/remera-2.jpg"
     },
     {
-        "articulo": "Remera Black Rouse",
+        "articulo": "Remera Batick",
         "talles": "S - L",
-        "color": "Blanco",
-        "precio": 4800,
+        "color": "Multicolor",
+        "precio": 6800,
         "imagen": "/parcial_practicas/Imagenes/remera-3.png"
     },
     {
-        "articulo": "Remera Balenciaga",
+        "articulo": "Remera Calavera",
         "talles": "S - XL",
-        "color": "Negro y Blanco",
-        "precio": 6800,
+        "color": "Negro con Blanco",
+        "precio": 7800,
         "imagen": "/parcial_practicas/Imagenes/remera-4-mujer.jpg"
     },
     {
-        "articulo": "Top Black-White",
+        "articulo": "Top Merlina",
         "talles": "S - L",
-        "color": "Negro y Blanco",
-        "precio": 4600,
+        "color": "Negro",
+        "precio": 5600,
         "imagen": "/parcial_practicas/Imagenes/remera-5-mujer.jpg"
     },
     {
-        "articulo": "Top Spider",
+        "articulo": "Top Corset",
         "talles": "S - L",
-        "color": "Gris",
+        "color": "Azul",
         "precio": 5800,
         "imagen": "/parcial_practicas/Imagenes/remera-6-mujer.jpg"
     }

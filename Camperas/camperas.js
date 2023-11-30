@@ -1,3 +1,7 @@
+const burgerMenu = document.querySelector("#menu-icono");
+const desktopMenu = document.querySelector(".menu-desktop");
+const mobileMenu = document.querySelector(".menu-mobile");
+
 document.addEventListener("DOMContentLoaded", traerDatos);
 
 function traerDatos() {
@@ -62,4 +66,15 @@ function traerDatos() {
   };
 
   listaCamperas.send();
+}
+
+burgerMenu.addEventListener('click', toggleDesktopMenu);
+burgerMenu.addEventListener('click', toggleMobileMenu);
+
+function toggleDesktopMenu() {
+  desktopMenu.classList.toggle('inactive');
+}
+
+function toggleMobileMenu(){
+  mobileMenu.classList.toggle('inactive');
 }

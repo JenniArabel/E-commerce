@@ -1,6 +1,9 @@
 let currentIndex = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 const totalSlides = slides.length;
+const burgerMenu = document.querySelector("#menu-icono");
+const desktopMenu = document.querySelector(".menu-desktop");
+const mobileMenu = document.querySelector(".menu-mobile");
 
 document.getElementById('nextBtn').addEventListener('click', () => {
   showSlide(currentIndex + 1);
@@ -64,3 +67,14 @@ document.getElementById("formulario").addEventListener("input", function(event){
 document.getElementById("enviar").addEventListener("click", () => {
   alert('Enviado!')
 });
+
+burgerMenu.addEventListener('click', toggleDesktopMenu);
+burgerMenu.addEventListener('click', toggleMobileMenu);
+
+function toggleDesktopMenu() {
+  desktopMenu.classList.toggle('inactive');
+}
+
+function toggleMobileMenu(){
+  mobileMenu.classList.toggle('inactive');
+}

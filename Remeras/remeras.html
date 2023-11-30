@@ -10,9 +10,77 @@
     <link rel="stylesheet" href="remeras.css" />
   </head>
   <body>
-    <div class="container-header">
-      <div class="menu">
-        <img src="/parcial_practicas/Imagenes/Icono Menu.png" alt="Menu" />
+    <nav class="container-header">
+      <div class="menu" onclick="toggleMenu()">
+        <img src="/parcial_practicas/Imagenes/Icono Menu.png" alt="Menu" id="menu-icono"/>
+      </div>
+
+      <div class="menu-desktop inactive" id="menu-desplegable">
+        <ul>
+          <li>
+            <a href="/parcial_practicas/index.html">
+              INICIO
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Remeras/remeras.html">
+              Remeras
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Pantalones/pantalones.html">
+              Pantalones
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Camperas/camperas.html">
+              Camperas
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Accesorios/accesorios.html">
+              Accesorios
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-mobile inactive">
+        <ul>
+          <li>
+            <a href="/parcial_practicas/index.html">
+              INICIO
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Remeras/remeras.html">
+              Remeras
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Pantalones/pantalones.html">
+              Pantalones
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Camperas/camperas.html">
+              Camperas
+            </a>
+          </li>
+
+          <li>
+            <a href="/parcial_practicas/Accesorios/accesorios.html">
+              Accesorios
+            </a>
+          </li>
+        </ul>
       </div>
 
       <div class="titulo">
@@ -22,7 +90,7 @@
       <div class="carrito">
         <img src="/parcial_practicas/Imagenes/Logo Carrito.png" alt="Carrito de Compras" />
       </div>
-    </div>
+    </nav>
 
     <div class="container-principal">
       <div class="container-remeras">

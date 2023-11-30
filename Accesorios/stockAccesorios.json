@@ -12,8 +12,8 @@
         "imagen": "/parcial_practicas/Imagenes/accesorios2.jpeg"
     },
     {
-        "articulo":"Pañuelo Hippie",
-        "color": "Blanco y Rojo",
+        "articulo":"Vincha Strass Mariposas",
+        "color": "Plateado",
         "precio": 3500,
         "imagen": "/parcial_practicas/Imagenes/accesorios3.jpeg"
     },
@@ -24,15 +24,15 @@
         "imagen": "/parcial_practicas/Imagenes/accesorios5.jpeg"
     },
     {
-        "articulo":"Lentes Lennon",
-        "color": "Negro y Rosa",
+        "articulo":"Lentes Pink",
+        "color": "Rosa",
         "precio": 15000,
         "imagen": "/parcial_practicas/Imagenes/accesorios4.jpeg"
     },
     {
-        "articulo":"Minibag Supreme",
+        "articulo":"Mochila Nike",
         "color": "Negro",
-        "precio": 6500,
+        "precio": 16500,
         "imagen": "/parcial_practicas/Imagenes/accesorios6.jpeg"
     }
 ]
