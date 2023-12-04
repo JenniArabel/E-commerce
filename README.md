@@ -1,4 +1,5 @@
-# Parcial Prácticas Profesionalizante I
-Parcial de Prácticas Profezionalizantes I
+# Proyecto de E-commerce
 
-Código realizado en HTML, CSS y JavaScript para proyecto e-commerce con propósitos educativos.
+Proyecto para segundo parcial de la materia Prácticas Profezionalizantes I
+
+Código realizado en HTML5, CSS3 y JavaScript para proyecto e-commerce con propósitos educativos.
