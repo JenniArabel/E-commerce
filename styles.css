@@ -42,7 +42,7 @@ body {
 }
 .menu-desktop{ 
   position: absolute;
-  top: 9vh;
+  top: 9.9vh;
   left: 0;
   width: 12vw;
   height: auto;
@@ -146,7 +146,7 @@ body {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #cd9db1;
   padding-top: 1.6vw;
 }
@@ -158,12 +158,6 @@ body {
   width: 10vw;
   cursor: pointer;
   transition: transform 0.3s ease;
-}
-.container-iconos img:first-of-type {
-  margin-left: 2vw;
-}
-.container-iconos img:last-of-type {
-  margin-right: 2vw;
 }
 .container-iconos img:hover {
   transform: scale(1.2);
@@ -225,13 +219,20 @@ li {
 .social-medias-icons img:hover {
   transform: scale(1.4);
 }
-@media only screen and (max-width: 640px) {
+@media (max-width: 640px) {
+  .titulo img{
+    width: 20vw;
+  }
   .carousel-slide img {
     width: 100%;
     height: auto;
   }
   .container-iconos {
     width: 100%;
+  }
+  .container-iconos img{
+    height: 15vh;
+    width: auto;
   }
   .carrito,
   .menu {
@@ -241,13 +242,35 @@ li {
   .carrito img,
   .menu img {
     width: 3.5vw;
-    margin-top: 0.5vh;
+    padding-top: 0.5vh;
   }
   .menu-desktop{
     display: none;
   }
+  .container-formulario{
+    font-size: 2.5vw;
+  }
+  .container-formulario input{
+    font-size: 2.5vw;
+  }
+  .container-formulario label{
+    font-size: 2.5vw;
+  }
+  .container-formulario textarea{
+    font-size: 2.5vw;
+  }
+  .submit-button{
+    height: 5vh;
+    font-size: 2.5vw;
+  }
+  .social-medias-icons img{
+    width: 6vw;
+  }
+  .menu-mobile{
+    top: 19.5vh;
+  }
 }
-@media only screen and (min-width: 641px) {
+@media (min-width: 641px) {
   .menu-mobile{
     display: none;
   }
