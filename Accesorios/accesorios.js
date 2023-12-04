@@ -55,8 +55,9 @@ function traerDatos() {
           <section> 
             <img src="${itemAccesorios.imagen}" alt="${itemAccesorios.articulo}">    
             <p>${itemAccesorios.articulo}</p>    
-            <p>${itemAccesorios.color}</p>    
-            <p>${itemAccesorios.precio}</p>
+            <p>Color: ${itemAccesorios.color}</p>    
+            <p>$ ${itemAccesorios.precio}</p>
+            <button type="button" class="anadir-carrito"> Agregar al carrito </button>
           </section>            
         `;
       }

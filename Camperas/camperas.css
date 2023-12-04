@@ -67,6 +67,9 @@ body {
   text-decoration: none;
   padding: 0.5vw;
 }
+.menu-desktop ul li a:hover{
+  color: violet;
+}
 .menu-desktop ul li:nth-child(1){
   font-weight: bold;
   border-bottom: 1px solid black;
@@ -160,6 +163,19 @@ body {
   background-color: #cd9db1;
   border-radius: 16px;
   font-size: 1vw;
+}
+.anadir-carrito{
+  color: black;
+  width: 8vw;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid white;
+  background-color: white;
+  margin-bottom: 4vh;
+}
+.anadir-carrito:hover{
+  color: black;
+  border: 2px solid rgb(239, 80, 173);
 }
 footer {
   background-color: white;

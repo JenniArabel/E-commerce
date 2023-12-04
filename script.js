@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentIndex);
 })
 
-//Cambiar de imagen cada 5 segundos
+//Cambiar de imagen cada 8 segundos
 setInterval(() => {
   showSlide(currentIndex + 1);
-}, 5000);
+}, 8000);
 
 function showSlide (index) {
   slides[currentIndex].style.display = 'none';
