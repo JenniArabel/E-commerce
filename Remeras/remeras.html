@@ -87,8 +87,26 @@
         <a href="/parcial_practicas/index.html"> <img src="/parcial_practicas/Imagenes/Logo Tienda.png" alt="Nombre tienda"/> </a>
       </div>
 
-      <div class="carrito">
-        <img src="/parcial_practicas/Imagenes/Logo Carrito.png" alt="Carrito de Compras" />
+      <div class="carrito" onclick="toggleCarrito()">
+        <img src="/parcial_practicas/Imagenes/Logo Carrito.png" alt="Carrito de Compras" id="carrito-icono" />
+      </div>
+
+      <div class="carrito-lista" id="carrito-list">
+        <!-- Contenido de la lista del carrito -->
+        <div class="titulo-carrito-container">
+          <p>Mi Carrito</p>
+        </div>
+
+        <div class="products-carrito-container" id="products-carrito">
+          <!-- Productos agregados al carrito por el usuario -->
+        </div>
+
+        <div class="total">
+          <p>Total:</p>
+          <p id="total-amount"></p>
+        </div>
+
+        <button class="comprar-button">Comprar</button>
       </div>
     </nav>
 
