@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <div class="container-header">
-      <div class="menu">
-        <img src="/parcial_practicas/Imagenes/Icono Menu.png" alt="Menu" id="menu-icono"/>
+    <nav class="container-header">
+      <div class="menu" onclick="toggleMenu()">
+        <img src="/parcial_practicas/Imagenes/Icono Menu.png" alt="Menu" id="menu-icono" />
       </div>
 
       <div class="menu-desktop inactive" id="menu-desplegable">
@@ -88,10 +88,26 @@
         <a href="/parcial_practicas/index.html"> <img src="/parcial_practicas/Imagenes/Logo Tienda.png" alt="Nombre tienda"/></a>
       </div>
 
-      <div class="carrito">
-        <img src="/parcial_practicas/Imagenes/Logo Carrito.png" alt="Carrito de Compras" />
+      <div class="carrito" onclick="toggleCarrito()">
+        <img src="/parcial_practicas/Imagenes/Logo Carrito.png" alt="Carrito de Compras" id="carrito-icono" />
       </div>
-    </div>
+
+      <div class="carrito-lista" id="carrito-list">
+        <div class="titulo-carrito-container">
+          <p>Mi Carrito</p>
+        </div>
+
+        <div class="products-carrito-container" id="products-carrito">
+        </div>
+
+        <div class="total">
+          <p>Total:</p>
+          <p id="total-amount"></p>
+        </div>
+
+        <button class="comprar-button">Comprar</button>
+      </div>
+    </nav>
 
     <div class="container-principal">
       <div class="container-pantalones">

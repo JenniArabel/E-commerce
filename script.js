@@ -1,9 +1,20 @@
 let currentIndex = 0;
+
 const slides = document.querySelectorAll('.carousel-slide');
 const totalSlides = slides.length;
+
 const burgerMenu = document.querySelector("#menu-icono");
 const desktopMenu = document.querySelector(".menu-desktop");
 const mobileMenu = document.querySelector(".menu-mobile");
+
+let total = 0;
+
+const carritoIcon = document.getElementById("carrito-icono");
+
+carritoIcon.addEventListener('click', function(event) {
+  event.stopPropagation(); //Evita que el evento de click se propague a elementos superiores
+  toggleCarrito();
+});
 
 document.getElementById('nextBtn').addEventListener('click', () => {
   showSlide(currentIndex + 1);
@@ -64,17 +75,55 @@ document.getElementById("formulario").addEventListener("input", function(event){
   }
 });
 
-document.getElementById("enviar").addEventListener("click", () => {
-  alert('Enviado!')
-});
+// document.getElementById("enviar").addEventListener("click", () => {
+//   alert('Enviado!')
+// });
 
 burgerMenu.addEventListener('click', toggleDesktopMenu);
 burgerMenu.addEventListener('click', toggleMobileMenu);
 
 function toggleDesktopMenu() {
+  const carritoLista = document.getElementById("carrito-list");
+  
+  carritoLista.style.display = carritoLista.style.display === "block" ? "none" : "none";
+  
   desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu(){
+  const carritoLista = document.getElementById("carrito-list");
+  
+  carritoLista.style.display = carritoLista.style.display === "block" ? "none" : "none";
+
   mobileMenu.classList.toggle('inactive');
+}
+
+function toggleCarrito() {
+  const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
+  const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
+
+  if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add('inactive');
+  }
+
+  if (!isMobileMenuClosed) {
+    mobileMenu.classList.add('inactive');
+  }
+
+  const carritoLista = document.getElementById("carrito-list");
+  
+  carritoLista.style.display = carritoLista.style.display === "none" || carritoLista.style.display === "" ? "block" : "none";
+}
+
+function eliminarProducto (productId, precio) {
+  const product = document.getElementById(productId);
+
+  product.remove();
+
+  total -= precio;
+  actualizarTotal();
+}
+function actualizarTotal() {
+  const totalAmountElement = document.getElementById("total-amount");
+  totalAmountElement.textContent = `$ ${total}`;
 }

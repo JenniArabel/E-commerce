@@ -1,8 +1,20 @@
+document.addEventListener("DOMContentLoaded", traerDatos);
+
 const burgerMenu = document.querySelector("#menu-icono");
 const desktopMenu = document.querySelector(".menu-desktop");
 const mobileMenu = document.querySelector(".menu-mobile");
 
-document.addEventListener("DOMContentLoaded", traerDatos);
+let total = 0;
+
+const carritoIcon = document.getElementById("carrito-icono");
+
+carritoIcon.addEventListener('click', function(event) {
+  event.stopPropagation(); //Evita que el evento de click se propague a elementos superiores
+  toggleCarrito();
+});
+
+burgerMenu.addEventListener('click', toggleDesktopMenu);
+burgerMenu.addEventListener('click', toggleMobileMenu);
 
 function traerDatos() {
   const listaCamperas = new XMLHttpRequest();
@@ -59,7 +71,7 @@ function traerDatos() {
             <p>Talles: ${itemCamperas.talles}</p>    
             <p>Color: ${itemCamperas.color}</p>    
             <p>$ ${itemCamperas.precio}</p>
-            <button type="button" class="anadir-carrito"> Agregar al carrito </button>
+            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemCamperas.imagen}', '${itemCamperas.articulo}', ${itemCamperas.precio})" > Agregar al carrito </button>
           </section>            
         `;
       }
@@ -69,13 +81,69 @@ function traerDatos() {
   listaCamperas.send();
 }
 
-burgerMenu.addEventListener('click', toggleDesktopMenu);
-burgerMenu.addEventListener('click', toggleMobileMenu);
-
 function toggleDesktopMenu() {
+  const carritoLista = document.getElementById("carrito-list");
+  
+  carritoLista.style.display = carritoLista.style.display === "block" ? "none" : "none";
+
   desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu(){
+  const carritoLista = document.getElementById("carrito-list");
+  
+  carritoLista.style.display = carritoLista.style.display === "block" ? "none" : "none";
+
   mobileMenu.classList.toggle('inactive');
+}
+
+function toggleCarrito() {
+  const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
+  const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
+
+  if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add('inactive');
+  }
+
+  if (!isMobileMenuClosed) {
+    mobileMenu.classList.add('inactive');
+  }
+
+  const carritoLista = document.getElementById("carrito-list");
+  
+  carritoLista.style.display = carritoLista.style.display === "none" || carritoLista.style.display === "" ? "block" : "none";
+}
+
+function agregarAlCarrito(imagen, articulo, precio) {
+  const carritoContainer = document.getElementById("products-carrito");
+  const nuevoProducto = document.createElement("div");
+
+  const productId = Date.now().toString(); //Identificador unico para el producto
+
+  nuevoProducto.id = productId;
+  nuevoProducto.className = "producto-carrito";
+  nuevoProducto.innerHTML = `<img src="${imagen}" alt="${articulo}"> 
+                            <p> ${articulo} </p>  
+                            <p> $ ${precio} </p>
+                            <img src="/parcial_practicas/Imagenes/icon_close.png" alt="Eliminar producto" class="eliminar-producto" onclick="eliminarProducto('${productId}', ${precio})">
+                            `;
+
+  carritoContainer.appendChild(nuevoProducto);
+
+  total += precio;
+  actualizarTotal();
+}
+
+function eliminarProducto (productId, precio) {
+  const product = document.getElementById(productId);
+
+  product.remove();
+
+  total -= precio;
+  actualizarTotal();
+}
+
+function actualizarTotal() {
+  const totalAmountElement = document.getElementById("total-amount");
+  totalAmountElement.textContent = `$ ${total}`;
 }

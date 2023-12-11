@@ -42,7 +42,7 @@ body {
 }
 .menu-desktop{ 
   position: absolute;
-  top: 9vh;
+  top: 10vh;
   left: 0;
   width: 12vw;
   height: auto;
@@ -110,7 +110,7 @@ body {
 .carrito-lista{
   display: none;
   position: absolute;
-  top: 9vh;
+  top: 10vh;
   right: 0;
   width: 30vw;
   height: auto;
@@ -139,7 +139,7 @@ body {
 }
 .eliminar-producto{
   width: auto;
-  height: 2vh;
+  height: 5vh;
   margin-top: 2vh;
 }
 .total{
@@ -221,7 +221,7 @@ body {
 .anadir-carrito{
   color: black;
   width: 8vw;
-  height: 5vh;
+  height: 6vh;
   border-radius: 16px;
   border: 2px solid white;
   background-color: white;
@@ -287,6 +287,11 @@ li {
     width: 3.5vw;
     margin-top: 0.5vh;
   }
+  .carrito,
+  .menu {
+    width: 6vw;
+    height: 6vw;
+  }
   .menu-desktop{
     display: none;
   }
@@ -328,16 +333,6 @@ li {
   .anadir-carrito{
     width: 12vw;
     height: 6vh;
-  }
-  .carrito,
-  .menu {
-    width: 6vw;
-    height: 6vw;
-  }
-  .carrito img,
-  .menu img{
-    width: 4.5vw;
-    margin-top: 1vw;
   }
   .container-formulario{
     font-size: 3vw;
