@@ -45,13 +45,16 @@ function traerDatos() {
 
     for (let itemPantalones of datosFiltradosPantalones) {
       pantalonesDatos.innerHTML += `    
-        <section> 
-          <img src="${itemPantalones.imagen}" alt="${itemPantalones.articulo}">    
-          <p>${itemPantalones.articulo}</p>    
-          <p>${itemPantalones.talles}</p>    
-          <p>${itemPantalones.color}</p>    
-          <p>${itemPantalones.precio}</p>
-        </section>
+      <section class="product"> 
+      <img src="${itemPantalones.imagen}" alt="${itemPantalones.articulo}">    
+      <div class="product-info">  
+        <p>${itemPantalones.articulo}</p>    
+        <p>Talles: ${itemPantalones.talles}</p>    
+        <p>Color: ${itemPantalones.color}</p>    
+        <p>$ ${itemPantalones.precio}</p>
+        <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemPantalones.imagen}', '${itemPantalones.articulo}', ${itemPantalones.precio})"> Agregar al carrito </button>
+      </div>
+    </section> 
       `;
     }
   });
@@ -65,14 +68,16 @@ function traerDatos() {
 
       for (let itemPantalones of datosPantalones) {
         retornoPantalones.innerHTML += `
-          <section> 
-            <img src="${itemPantalones.imagen}" alt="${itemPantalones.articulo}">    
-            <p>${itemPantalones.articulo}</p>    
-            <p>Talles: ${itemPantalones.talles}</p>    
-            <p>Color: ${itemPantalones.color}</p>    
-            <p>$ ${itemPantalones.precio}</p>
-            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemPantalones.imagen}', '${itemPantalones.articulo}', ${itemPantalones.precio})"> Agregar al carrito </button>
-          </section>       
+        <section class="product"> 
+        <img src="${itemPantalones.imagen}" alt="${itemPantalones.articulo}">    
+        <div class="product-info">  
+          <p>${itemPantalones.articulo}</p>    
+          <p>Talles: ${itemPantalones.talles}</p>    
+          <p>Color: ${itemPantalones.color}</p>    
+          <p>$ ${itemPantalones.precio}</p>
+          <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemPantalones.imagen}', '${itemPantalones.articulo}', ${itemPantalones.precio})"> Agregar al carrito </button>
+        </div>
+      </section>       
         `;
       }
     }

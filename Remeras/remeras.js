@@ -45,13 +45,16 @@ function traerDatos() {
 
     for (let itemRemeras of datosFiltradosRemeras) {
       remerasDatos.innerHTML += `    
-        <section> 
-          <img src="${itemRemeras.imagen}" alt="${itemRemeras.articulo}">    
-          <p>${itemRemeras.articulo}</p>    
-          <p>${itemRemeras.talles}</p>    
-          <p>${itemRemeras.color}</p>    
-          <p>${itemRemeras.precio}</p>
-        </section>
+      <section class="product"> 
+      <img src="${itemRemeras.imagen}" alt="${itemRemeras.articulo}">    
+      <div class="product-info">  
+        <p>${itemRemeras.articulo}</p>    
+        <p>Talles: ${itemRemeras.talles}</p>    
+        <p>Color: ${itemRemeras.color}</p>    
+        <p>$ ${itemRemeras.precio}</p>
+        <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemRemeras.imagen}', '${itemRemeras.articulo}', ${itemRemeras.precio})"> Agregar al carrito </button>
+      </div>
+    </section> 
       `;
     }
   });
@@ -67,11 +70,13 @@ function traerDatos() {
         retornoRemeras.innerHTML += ` 
           <section class="product"> 
             <img src="${itemRemeras.imagen}" alt="${itemRemeras.articulo}">    
-            <p>${itemRemeras.articulo}</p>    
-            <p>Talles: ${itemRemeras.talles}</p>    
-            <p>Color: ${itemRemeras.color}</p>    
-            <p>$ ${itemRemeras.precio}</p>
-            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemRemeras.imagen}', '${itemRemeras.articulo}', ${itemRemeras.precio})"> Agregar al carrito </button>
+            <div class="product-info">  
+              <p>${itemRemeras.articulo}</p>    
+              <p>Talles: ${itemRemeras.talles}</p>    
+              <p>Color: ${itemRemeras.color}</p>    
+              <p>$ ${itemRemeras.precio}</p>
+              <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemRemeras.imagen}', '${itemRemeras.articulo}', ${itemRemeras.precio})"> Agregar al carrito </button>
+            </div>
           </section>      
         `;
       }

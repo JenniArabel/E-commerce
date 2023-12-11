@@ -78,7 +78,7 @@ body {
   background-color: white;
   border: 1px solid black;
   position: fixed;
-  top: 15vh;
+  top: 12vh;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -279,105 +279,119 @@ li {
 .social-medias-icons img:hover {
   transform: scale(1.4);
 }
-@media screen and (max-width: 640px) {
-  .titulo img {
-    width: 25vw;
+@media only screen and (max-width: 767px) {
+  .titulo img{
+    width: 30vw;
+  }
+  .carrito,
+  .menu {
+    width: 12vw;
+    height: 12vw;
   }
   .carrito img,
   .menu img {
-    width: 3.5vw;
-    margin-top: 0.5vh;
+    width: 10vw;
+    padding-top: 0.8vh;
+  }
+  .menu-mobile{
+    font-size: 7vw;
   }
   .menu-desktop{
     display: none;
   }
-  .container-filtro{
-    font-size: 50vw;
+  .carrito-lista{
+    width: 100%;
+    top: 7vh;
+    font-size: 6vw;
+  }
+  .titulo-carrito-container{
+    padding-left: 6vw;
+  }
+  .titulo-carrito-container p{
+    font-size: 6vw;
+  }
+  .producto-carrito{
+    padding-left: 6vw;
+    margin-bottom: 2vh;
+  }
+  .producto-carrito img:first-of-type {
+    width: 20vw;
+  }
+  .total{
+    padding-left: 6vw;
+  }
+  .comprar-button{
+    width: 20vw;
+    font-size: 6vw;
+    width: 40vw;
   }
   .filtro{
-    width: 40vw;
-    font-size: 3vw;
+    width: 65vw;
+    font-size: 5vw;
   }
   .filtrar-button{
-    width: 16vw;
-    font-size: 3vw;
+    font-size: 5vw;
   }
-  .camperas-datos section {
+  .camperas-datos{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .camperas-datos section{
+    width: 90vw;
+    height: 32vh;
+    padding: 2vw;
+  }
+  .product{
+    display: flex;
+    align-items: center;
+  }
+  .product img{
     width: 40vw;
-    height: fit-content;
-    font-size: 3vw;
+    height: auto;
+    margin: 3vw;
   }
-  .camperas-datos section:first-of-type,
-  .camperas-datos section:nth-child(2){
+  .product-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .product-info p{
+    font-size: 5.5vw;
+    margin-bottom: 0;
+  }
+  .product-info p:first-of-type{
+    margin-top: 7vh;
+  }
+  .anadir-carrito{
+    width: 40vw;
+    height: 4vh;
     margin-top: 2vh;
+    font-size: 4.5vw;
   }
-  .camperas-datos img {
-    width: 25vw;
+  .container-iconos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
   }
-  .carrito,
-  .menu {
-    width: 6vw;
-    height: 6vw;
+  .container-iconos img{
+    height: 15vh;
+    width: auto;
   }
-  .carrito img,
-  .menu img{
-    width: 4.5vw;
-    margin-top: 1vw;
-  }
-  .container-formulario{
-    font-size: 3vw;
-  }
-  .email-suscribir{
-    font-size: 3vw;
+  .container-formulario, 
+  .container-formulario input,
+  .container-formulario label{
+    font-size: 5vw;
   }
   .submit-button{
-    font-size: 3vw;
+    height: 5vh;
+    font-size: 5vw;
   }
   .social-medias-icons img{
-    width: 8vw;
+    width: 16vw;
   }
 }
-@media (max-width: 1000px) and (min-width: 641px) {
-  .titulo img {
-    width: 25vw;
-  }
-  .menu,
-  .carrito{
-    width: 5vw;
-    height: 5vw;
-  }
-  .menu img,
-  .carrito img{
-    width: 3.6vw;
-    margin-top: 0.7vh;
-  }
-  .filtro{
-    width: 30vw;
-    font-size: 2vw;
-  }
-  .filtrar-button{
-    width: 10vw;
-    font-size: 2.5vw;
-  }
-  .camperas-datos section {
-    width: 30vw;
-    height: fit-content;
-    font-size: 2.5vw;
-  }
-  .container-formulario{
-    font-size: 2.5vw;
-  }
-  .email-suscribir{
-    font-size: 2.5vw;
-  }
-  .submit-button{
-    font-size: 2.5vw;
-  }
-  .social-medias-icons img{
-    width: 6vw;
-  }
-}
-@media (min-width: 641px) {
+@media only screen and (min-width: 767px) {
   .menu-mobile{
     display: none;
   }

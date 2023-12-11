@@ -45,12 +45,15 @@ function traerDatos() {
 
     for (let itemCamperas of datosFiltradosCamperas) {
       camperasDatos.innerHTML += `    
-        <section> 
+        <section class="product"> 
           <img src="${itemCamperas.imagen}" alt="${itemCamperas.articulo}">    
-          <p>${itemCamperas.articulo}</p>    
-          <p>${itemCamperas.talles}</p>    
-          <p>${itemCamperas.color}</p>    
-          <p>${itemCamperas.precio}</p>
+          <div class="product-info"> 
+            <p>${itemCamperas.articulo}</p>    
+            <p>Talles: ${itemCamperas.talles}</p>    
+            <p>Color:${itemCamperas.color}</p>    
+            <p>$ ${itemCamperas.precio}</p>
+            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemCamperas.imagen}', '${itemCamperas.articulo}', ${itemCamperas.precio})"> Agregar al carrito </button>
+          </div>
         </section>
       `;
     }
@@ -65,13 +68,15 @@ function traerDatos() {
 
       for (let itemCamperas of datosCamperas) {
         retornoCamperas.innerHTML += `
-          <section> 
+          <section class="product"> 
             <img src="${itemCamperas.imagen}" alt="${itemCamperas.articulo}">    
-            <p>${itemCamperas.articulo}</p>    
-            <p>Talles: ${itemCamperas.talles}</p>    
-            <p>Color: ${itemCamperas.color}</p>    
-            <p>$ ${itemCamperas.precio}</p>
-            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemCamperas.imagen}', '${itemCamperas.articulo}', ${itemCamperas.precio})" > Agregar al carrito </button>
+            <div class="product-info">
+              <p>${itemCamperas.articulo}</p>    
+              <p>Talles: ${itemCamperas.talles}</p>    
+              <p>Color: ${itemCamperas.color}</p>    
+              <p>$ ${itemCamperas.precio}</p>
+              <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemCamperas.imagen}', '${itemCamperas.articulo}', ${itemCamperas.precio})" > Agregar al carrito </button>
+            </div>    
           </section>            
         `;
       }

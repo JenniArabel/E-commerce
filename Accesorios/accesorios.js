@@ -45,11 +45,14 @@ function traerDatos() {
 
     for (let itemAccesorios of datosFiltradosAccesorios) {
       accesoriosDatos.innerHTML += `    
-        <section> 
-          <img src="${itemAccesorios.imagen}" alt="${itemAccesorios.articulo}">    
-          <p>${itemAccesorios.articulo}</p>   
-          <p>${itemAccesorios.color}</p>    
-          <p>${itemAccesorios.precio}</p>
+        <section class="product"> 
+          <img src="${itemAccesorios.imagen}" alt="${itemAccesorios.articulo}">
+          <div class="product-info">     
+            <p>${itemAccesorios.articulo}</p>   
+            <p>Color: ${itemAccesorios.color}</p>    
+            <p>$ ${itemAccesorios.precio}</p>
+            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemAccesorios.imagen}', '${itemAccesorios.articulo}', ${itemAccesorios.precio})"> Agregar al carrito </button>
+          </div>
         </section>
       `;
     }
@@ -64,12 +67,14 @@ function traerDatos() {
 
       for (let itemAccesorios of datosAccesorios) {
         retornoAccesorios.innerHTML += `
-          <section> 
+          <section class="product"> 
             <img src="${itemAccesorios.imagen}" alt="${itemAccesorios.articulo}">    
-            <p>${itemAccesorios.articulo}</p>    
-            <p>Color: ${itemAccesorios.color}</p>    
-            <p>$ ${itemAccesorios.precio}</p>
-            <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemAccesorios.imagen}', '${itemAccesorios.articulo}', ${itemAccesorios.precio})"> Agregar al carrito </button>
+            <div class="product-info">
+              <p>${itemAccesorios.articulo}</p>    
+              <p>Color: ${itemAccesorios.color}</p>    
+              <p>$ ${itemAccesorios.precio}</p>
+              <button type="button" class="anadir-carrito" onclick="agregarAlCarrito('${itemAccesorios.imagen}', '${itemAccesorios.articulo}', ${itemAccesorios.precio})"> Agregar al carrito </button>
+            </div>
           </section>            
         `;
       }
