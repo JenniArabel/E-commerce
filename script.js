@@ -75,9 +75,9 @@ document.getElementById("formulario").addEventListener("input", function(event){
   }
 });
 
-// document.getElementById("enviar").addEventListener("click", () => {
-//   alert('Enviado!')
-// });
+//  document.getElementById("enviar").addEventListener("click", () => {
+//    alert('Enviado!')
+//  });
 
 burgerMenu.addEventListener('click', toggleDesktopMenu);
 burgerMenu.addEventListener('click', toggleMobileMenu);
